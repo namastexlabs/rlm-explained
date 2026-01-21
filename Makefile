@@ -1,4 +1,4 @@
-.PHONY: help check-deps install install-dev start start-backend start-frontend lint format test check
+.PHONY: help check-deps install install-dev setup start start-backend start-frontend lint format test check
 
 help:
 	@echo "RLM Explained - Educational Tool for Recursive Language Models"
@@ -6,6 +6,7 @@ help:
 	@echo "Setup:"
 	@echo "  make install        - Install all dependencies (backend + frontend)"
 	@echo "  make install-dev    - Install dev dependencies"
+	@echo "  make setup          - Interactive setup wizard (configure LLM provider)"
 	@echo ""
 	@echo "Running:"
 	@echo "  make start          - Start backend (port 8000) and frontend (port 3000)"
@@ -19,17 +20,27 @@ help:
 	@echo "  make check          - Run lint + format + tests"
 
 check-deps:
-	@echo "Checking dependencies..."
-	@command -v uv >/dev/null 2>&1 || { echo "Error: 'uv' is not installed. Install it with: curl -LsSf https://astral.sh/uv/install.sh | sh"; exit 1; }
-	@command -v pnpm >/dev/null 2>&1 || { echo "Error: 'pnpm' is not installed. Install it with: npm install -g pnpm"; exit 1; }
-	@echo "All dependencies found."
+	@echo "Checking prerequisites..."
+	@# Check UV (handles Python version management)
+	@command -v uv >/dev/null 2>&1 || { echo "Error: 'uv' not installed. Install: curl -LsSf https://astral.sh/uv/install.sh | sh"; exit 1; }
+	@# Check Node.js >= 18
+	@command -v node >/dev/null 2>&1 || { echo "Error: 'node' not found. Install Node.js 18+ from https://nodejs.org"; exit 1; }
+	@node -e "process.exit(parseInt(process.version.slice(1)) >= 18 ? 0 : 1)" 2>/dev/null || { echo "Error: Node.js 18+ required. Found: $$(node --version)"; exit 1; }
+	@# Check pnpm
+	@command -v pnpm >/dev/null 2>&1 || { echo "Error: 'pnpm' not installed. Install: npm install -g pnpm"; exit 1; }
+	@echo "All prerequisites found."
 
 install: check-deps
 	@echo "Installing dependencies..."
 	uv sync --extra server
 	@echo "Installing frontend..."
 	cd visualizer && pnpm install
+	@echo "Building frontend..."
+	cd visualizer && pnpm build
 	@echo "Installation complete!"
+
+setup: check-deps
+	@uv run python scripts/setup.py
 
 install-dev: check-deps
 	uv sync --group dev --group test --extra server
