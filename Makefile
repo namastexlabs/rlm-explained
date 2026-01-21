@@ -1,21 +1,16 @@
-.PHONY: help install install-dev install-modal run-all \
-        quickstart docker-repl lm-repl modal-repl \
-        lint format test check
+.PHONY: help check-deps install install-dev start start-backend start-frontend lint format test check
 
 help:
-	@echo "RLM Examples Makefile"
+	@echo "RLM Explained - Educational Tool for Recursive Language Models"
 	@echo ""
-	@echo "Usage:"
-	@echo "  make install        - Install base dependencies with uv"
-	@echo "  make install-dev    - Install dev dependencies with uv"
-	@echo "  make install-modal  - Install modal dependencies with uv"
-	@echo "  make run-all        - Run all examples (requires all deps and API keys)"
+	@echo "Setup:"
+	@echo "  make install        - Install all dependencies (backend + frontend)"
+	@echo "  make install-dev    - Install dev dependencies"
 	@echo ""
-	@echo "Examples:"
-	@echo "  make quickstart     - Run quickstart.py (needs OPENAI_API_KEY)"
-	@echo "  make docker-repl    - Run docker_repl_example.py (needs Docker)"
-	@echo "  make lm-repl        - Run lm_in_repl.py (needs PORTKEY_API_KEY)"
-	@echo "  make modal-repl     - Run modal_repl_example.py (needs Modal)"
+	@echo "Running:"
+	@echo "  make start          - Start backend (port 8000) and frontend (port 3000)"
+	@echo "  make start-backend  - Start only the backend server"
+	@echo "  make start-frontend - Start only the frontend dev server"
 	@echo ""
 	@echo "Development:"
 	@echo "  make lint           - Run ruff linter"
@@ -23,28 +18,37 @@ help:
 	@echo "  make test           - Run tests"
 	@echo "  make check          - Run lint + format + tests"
 
-install:
-	uv sync
+check-deps:
+	@echo "Checking dependencies..."
+	@command -v uv >/dev/null 2>&1 || { echo "Error: 'uv' is not installed. Install it with: curl -LsSf https://astral.sh/uv/install.sh | sh"; exit 1; }
+	@command -v pnpm >/dev/null 2>&1 || { echo "Error: 'pnpm' is not installed. Install it with: npm install -g pnpm"; exit 1; }
+	@echo "All dependencies found."
 
-install-dev:
+install: check-deps
+	@echo "Installing backend dependencies..."
+	uv pip install -e ".[server]"
+	@echo "Installing frontend dependencies..."
+	cd visualizer && pnpm install
+	@echo "Installation complete!"
+
+install-dev: check-deps
 	uv sync --group dev --group test
+	uv pip install -e ".[server]"
+	cd visualizer && pnpm install
 
-install-modal:
-	uv pip install -e ".[modal]"
+start-backend:
+	uv run python server/main.py
 
-run-all: quickstart docker-repl lm-repl modal-repl
+start-frontend:
+	cd visualizer && pnpm dev
 
-quickstart: install
-	uv run python -m examples.quickstart
-
-docker-repl: install
-	uv run python -m examples.docker_repl_example
-
-lm-repl: install
-	uv run python -m examples.lm_in_repl
-
-modal-repl: install-modal
-	uv run python -m examples.modal_repl_example
+start:
+	@echo "Starting RLM servers..."
+	@echo "Backend: http://localhost:8000"
+	@echo "Frontend: http://localhost:3000"
+	@trap 'kill 0' EXIT; \
+	uv run python server/main.py & \
+	cd visualizer && pnpm dev
 
 lint: install-dev
 	uv run ruff check .
