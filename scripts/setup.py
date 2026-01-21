@@ -4,7 +4,6 @@
 import os
 import subprocess
 import sys
-from getpass import getpass
 from pathlib import Path
 
 from rich.console import Console
@@ -167,7 +166,7 @@ def get_api_keys(provider: dict) -> dict[str, str]:
 
     for var in provider["env_vars"]:
         if var["secret"]:
-            value = getpass(f"{var['description']}: ")
+            value = Prompt.ask(var["description"], password=True)
         else:
             value = Prompt.ask(var["description"])
 
