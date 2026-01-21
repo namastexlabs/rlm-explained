@@ -1,0 +1,285 @@
+{
+  "app": {
+    "title": "RLM",
+    "subtitle": "na Prática",
+    "tagline": "",
+    "footer": "RLM na Prática - Ferramenta Educacional",
+    "privacyFooter": "Seus dados são processados localmente, não armazenados",
+    "paperRef": "Baseado em",
+    "paperTitle": "Recursive Language Models (RLMs)"
+  },
+  "dashboard": {
+    "problemTitle": "O Problema: Deterioração de Contexto",
+    "problemText1": "Toda IA tem uma \"janela de contexto\" - uma quantidade fixa de informação que ela consegue manter em mente de uma vez. Conforme essa janela se enche - com um documento longo, uma pergunta complexa, ou simplesmente uma conversa de vai-e-vem - algo se quebra.",
+    "problemText2": "Pesquisadores chamam isso de <strong>deterioração de contexto</strong>: quanto mais informação a IA tenta processar, pior ela performa. Detalhes anteriores se perdem. Respostas ficam menos precisas. Estudos mostram que até os modelos mais avançados caem de quase perfeitos para com dificuldades conforme sua janela de contexto se enche.",
+    "solutionTitle": "A Solução: Modelos de Linguagem Recursivos",
+    "solutionText1": "Pesquisadores do MIT desenvolveram uma nova abordagem chamada <strong>RLM</strong> - abreviação de <strong>Modelos de Linguagem Recursivos</strong>. Em vez de amontoar tudo na janela de contexto, o RLM mantém informações <em>externamente</em>, como anotações em uma mesa em vez de pensamentos amontoados na sua cabeça.",
+    "solutionText2": "O RLM explora conteúdo programaticamente - lendo o que precisa, rastreando descobertas em código, e até delegando para IAs auxiliares para tarefas específicas. Quando ele cria esses auxiliares, cada um recebe uma <strong>janela de contexto limpa</strong>, livre de deterioração. O resultado: IA que processa 100x mais informação sem perder precisão.",
+    "watchHint": "",
+    "tryIt": "Experimente você mesmo",
+    "whatYouSee": "O que você verá",
+    "exploration": "Exploração",
+    "explorationDesc": "RLM lê e estrutura seu documento",
+    "codeExecution": "Execução de Código",
+    "codeExecutionDesc": "Scripts Python processam o conteúdo",
+    "helperAIs": "IAs Auxiliares",
+    "helperAIsDesc": "IAs menores analisam cada seção",
+    "finalAnswer": "Resposta Final",
+    "finalAnswerDesc": "Insights combinados em uma resposta"
+  },
+  "flowDiagram": {
+    "traditionalAI": "IA Tradicional",
+    "rlmSolution": "Solução RLM",
+    "contextWindow": "Janela de Contexto",
+    "full": "{percent}% cheio",
+    "contextFilling": "Contexto enchendo...",
+    "detailsLost": "Detalhes se perdendo...",
+    "performanceDropping": "Performance caindo...",
+    "traditionalDesc": "Tudo amontoado em um contexto. Informações antigas se perdem conforme novas chegam.",
+    "yourContent": "Seu Conteúdo + Pergunta",
+    "exploresWithCode": "Explora com Código",
+    "fresh": "Limpo",
+    "helperAIs": "IAs Auxiliares (contexto limpo)",
+    "accurateAnswer": "Resposta Precisa"
+  },
+  "exampleQuestions": {
+    "summarize": "Resuma os principais pontos deste documento",
+    "decisions": "Quais decisões foram tomadas nesta reunião?",
+    "findings": "Quais são as principais descobertas ou conclusões?",
+    "actionItems": "Liste todos os itens de ação mencionados"
+  },
+  "processor": {
+    "changeFile": "Trocar Arquivo",
+    "characters": "({count} caracteres)",
+    "askQuestion": "Faça uma Pergunta",
+    "placeholder": "O que você gostaria de saber sobre este documento?",
+    "tryOne": "Experimente uma dessas:",
+    "analyze": "Analisar com RLM",
+    "processing": "Processando...",
+    "cancel": "Cancelar",
+    "runAgain": "Executar Novamente",
+    "step": "Passo {number}",
+    "stepsCompleted": "Passos completados:",
+    "steps": "{count} passo",
+    "stepsPlural": "{count} passos",
+    "rlmThinking": "RLM está pensando...",
+    "codeExecuted": "Código executado",
+    "errorTitle": "Algo deu errado",
+    "maxSteps": "Máx. Passos:",
+    "changeLLM": "Alterar"
+  },
+  "phases": {
+    "exploring": {
+      "title": "Explorando Seu Documento",
+      "narrator": "RLM está lendo seu documento para entender sua estrutura.",
+      "insight": "Diferente do ChatGPT, o RLM mantém seu documento externo e o examina através de código."
+    },
+    "analyzing": {
+      "title": "Dividindo em Partes",
+      "narrator": "RLM está escrevendo código para dividir o documento em partes gerenciáveis.",
+      "insight": "É por isso que o RLM consegue lidar com documentos até 100x maiores que uma IA típica."
+    },
+    "synthesizing": {
+      "title": "Consultando IAs Auxiliares",
+      "narrator": "RLM está delegando a análise de cada parte para IAs auxiliares.",
+      "insight": "Esta é a parte 'recursiva' - RLM chama outras IAs para ajudar."
+    },
+    "answering": {
+      "title": "Escrevendo a Resposta",
+      "narrator": "RLM está combinando todas as descobertas em uma resposta final.",
+      "insight": "A resposta é baseada em análise sistemática, não em adivinhação."
+    }
+  },
+  "iterationSummary": {
+    "code": "Código",
+    "helper": "{count} auxiliar",
+    "helpers": "{count} auxiliares",
+    "askedHelpers": "Consultou {count} IA auxiliar para análise",
+    "askedHelpersPlural": "Consultou {count} IAs auxiliares para análise",
+    "executedCode": "Executou código para processar conteúdo",
+    "explored": "Explorou estrutura do documento"
+  },
+  "storyView": {
+    "back": "Voltar",
+    "expandAll": "Expandir Tudo",
+    "collapseAll": "Recolher Tudo",
+    "finalAnswer": "Resposta Final",
+    "analysisResult": "O resultado da análise do RLM",
+    "inProgress": "Análise em andamento...",
+    "seeHow": "Veja como o RLM descobriu isso ({count} passos)",
+    "step": "Passo {number}:",
+    "code": "Código",
+    "output": "Saída",
+    "helperResponses": "Respostas das IAs Auxiliares ({count})",
+    "helperNumber": "IA Auxiliar #{number}",
+    "clickExpand": "Clique para expandir",
+    "analyzingContent": "Analisando conteúdo...",
+    "fullQuestion": "Pergunta Completa:",
+    "helperResponse": "Resposta do Auxiliar:",
+    "rlmThinking": "Pensamento do RLM:",
+    "footerSummary": "RLM processou seu documento em {count} passos de pensamento, usando código para analisar e sintetizar informações sistematicamente.",
+    "footerDifference": "Isso é o que torna o RLM diferente da IA tradicional - ele trata seu documento como dados externos que examina através de código."
+  },
+  "storyPhases": {
+    "exploring": {
+      "title": "Explorando Seu Documento",
+      "description": "RLM está lendo e entendendo a estrutura do seu documento."
+    },
+    "analyzing": {
+      "title": "Dividindo em Partes",
+      "description": "RLM está dividindo o documento em partes menores e gerenciáveis."
+    },
+    "synthesizing": {
+      "title": "Conectando as Descobertas",
+      "description": "RLM está combinando insights de diferentes seções."
+    },
+    "answering": {
+      "title": "Escrevendo a Resposta Final",
+      "description": "RLM está compondo uma resposta abrangente baseada em sua análise."
+    }
+  },
+  "storyInsights": {
+    "first": "Diferente do ChatGPT, o RLM consegue lidar com documentos até 100x maiores porque os mantém externos e os acessa através de código, em vez de amontoar tudo na memória.",
+    "subLM": "Isso é pensamento \"recursivo\" - RLM cria IAs auxiliares que recebem uma janela de contexto limpa, livre de deterioração acumulada. Cada auxiliar começa com a mente limpa.",
+    "code": "RLM usa um REPL (como uma calculadora para código) para executar Python e ver resultados imediatamente. Isso permite processar seu documento sistematicamente.",
+    "default": "RLM está construindo sobre sua análise anterior, refinando seu entendimento sistematicamente."
+  },
+  "storyTitles": {
+    "gettingStarted": "Começando",
+    "deliveringAnswer": "Entregando a Resposta",
+    "askingForHelp": "Pedindo Ajuda",
+    "writingPlan": "Escrevendo um Plano"
+  },
+  "storyStats": {
+    "iterations": "passos",
+    "codeBlocks": "blocos de código",
+    "helpers": "auxiliares",
+    "time": "tempo total",
+    "tokens": "tokens"
+  },
+  "fileUploader": {
+    "pasteContent": "Cole seu conteúdo",
+    "pastePlaceholder": "Cole texto, código ou qualquer conteúdo que você queira analisar...",
+    "analyzeContent": "Analisar Conteúdo",
+    "or": "ou",
+    "dropHere": "Solte aqui",
+    "uploadDocument": "Enviar Documento",
+    "uploadFile": "Enviar Arquivo",
+    "uploadJsonl": "Enviar .jsonl",
+    "supportsDocuments": "Suporta arquivos .txt, .md e .pdf",
+    "supportsAll": "Suporta arquivos .txt, .md, .pdf e .jsonl",
+    "supportsJsonl": "Suporta arquivos de log .jsonl",
+    "chooseFile": "Escolher Arquivo",
+    "unsupportedType": "Por favor, envie um tipo de arquivo suportado: {types}",
+    "uploadJsonlOnly": "Por favor, envie um arquivo .jsonl",
+    "uploadDocumentOnly": "Por favor, envie um arquivo .txt, .md ou .pdf",
+    "failedRead": "Falha ao ler arquivo"
+  },
+  "privacy": {
+    "title": "Privacidade Protegida",
+    "full": "Seus arquivos são processados diretamente no seu navegador. Nenhum dado é enviado ou armazenado em nenhum servidor. A única chamada externa é para a API Cerebras para processamento RLM, que não retém seus dados.",
+    "compact": "Arquivos processados no navegador. Dados enviados apenas para API Cerebras para processamento e não retidos.",
+    "label": "Privacidade:"
+  },
+  "logViewer": {
+    "back": "Voltar",
+    "unknownModel": "Modelo desconhecido",
+    "unknownBackend": "Backend desconhecido",
+    "unknownEnv": "Ambiente desconhecido",
+    "hasErrors": "Tem Erros",
+    "completed": "Completado",
+    "contextQuestion": "Contexto / Pergunta",
+    "finalAnswer": "Resposta Final",
+    "notCompleted": "Ainda não completado",
+    "iterations": "Iterações",
+    "code": "Código",
+    "subLM": "Sub-LM",
+    "exec": "Exec",
+    "navigate": "Navegar",
+    "backKey": "Voltar"
+  },
+  "iterationTimeline": {
+    "title": "Trajetória do Modelo de Linguagem Recursivo",
+    "total": "({count} total)",
+    "scroll": "rolar",
+    "final": "FINAL",
+    "error": "ERRO",
+    "code": "{count} código",
+    "sub": "{count} sub"
+  },
+  "trajectoryPanel": {
+    "conversation": "Conversa",
+    "iterationOf": "Iteração {current} de {total}",
+    "codeCount": "{count} código",
+    "answer": "Resposta",
+    "systemPrompt": "Prompt do Sistema",
+    "user": "Usuário",
+    "assistant": "Assistente",
+    "instructionsContext": "Instruções e configuração de contexto",
+    "continuationPrompt": "Prompt de continuação",
+    "modelResponse": "Resposta do Modelo",
+    "iteration": "Iteração {number}",
+    "chars": "{count} caracteres",
+    "finalAnswer": "Resposta Final",
+    "taskCompleted": "Tarefa completada com sucesso"
+  },
+  "executionPanel": {
+    "selectIteration": "Selecione uma iteração para ver detalhes de execução",
+    "codeSubLM": "Código e Chamadas Sub-LM",
+    "iteration": "Iteração {number}",
+    "codeBlock": "{count} bloco de código",
+    "codeBlocks": "{count} blocos de código",
+    "subLMCall": "{count} chamada sub-LM",
+    "subLMCalls": "{count} chamadas sub-LM",
+    "hasFinalAnswer": "Tem Resposta Final",
+    "codeExecution": "Execução de Código",
+    "subLMCallsTab": "Chamadas Sub-LM ({count})",
+    "noCode": "Nenhum código foi executado nesta iteração",
+    "noCodeDesc": "O modelo não escreveu nenhum bloco de código",
+    "noSubLM": "Nenhuma chamada sub-LM foi feita nesta iteração",
+    "noSubLMDesc": "Chamadas sub-LM aparecem quando usando llm_query() no REPL",
+    "llmQueryFrom": "llm_query() do Bloco #{number}",
+    "tokensIn": "{count} entrada",
+    "tokensOut": "{count} saída",
+    "prompt": "Prompt",
+    "response": "Resposta"
+  },
+  "codeBlock": {
+    "codeBlock": "Bloco de Código #{number}",
+    "error": "Erro",
+    "output": "Saída",
+    "python": "Python",
+    "stdout": "stdout",
+    "stderr": "stderr",
+    "variables": "Variáveis",
+    "subLMCalls": "Chamadas Sub-LM ({count})",
+    "llmQuery": "llm_query #{number}",
+    "promptTokens": "{count} prompt",
+    "completionTokens": "{count} completion",
+    "promptLabel": "Prompt:",
+    "responseLabel": "Resposta:"
+  },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "locale": {
+    "toggle": "Mudar idioma",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "llmModal": {
+    "title": "Selecionar Provedor de LLM",
+    "description": "Executar mais de 10 passos requer selecionar um provedor de LLM e inserir sua chave de API.",
+    "selectProvider": "Selecionar Provedor",
+    "apiKey": "Chave de API",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "privacyNotice": "Sua chave de API é processada apenas em memória e nunca armazenada em nossos servidores. Ela é enviada diretamente ao provedor apenas para esta sessão.",
+    "cancel": "Cancelar",
+    "continue": "Continuar"
+  }
+}

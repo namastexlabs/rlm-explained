@@ -1,0 +1,285 @@
+{
+  "app": {
+    "title": "RLM",
+    "subtitle": "Explained",
+    "tagline": "",
+    "footer": "RLM Explained - Educational Tool",
+    "privacyFooter": "Your data is processed locally, not stored",
+    "paperRef": "Based on",
+    "paperTitle": "Recursive Language Models (RLMs)"
+  },
+  "dashboard": {
+    "problemTitle": "The Problem: Context Rot",
+    "problemText1": "Every AI has a \"context window\" - a fixed amount of information it can hold in mind at once. As that window fills up - from a long document, a complex question, or simply a back-and-forth conversation - something breaks down.",
+    "problemText2": "Researchers call this <strong>context rot</strong>: the more information AI tries to juggle, the worse it performs. Details from earlier get lost. Answers become less accurate. Studies show that even the most advanced models drop from near-perfect to struggling as their context window fills up.",
+    "solutionTitle": "The Solution: Recursive Language Models",
+    "solutionText1": "Researchers at MIT developed a new approach called <strong>RLM</strong> - short for <strong>Recursive Language Models</strong>. Instead of cramming everything into the context window, RLM keeps information <em>external</em>, like notes on a desk rather than thoughts crammed in your head.",
+    "solutionText2": "RLM explores content programmatically - reading what it needs, tracking findings in code, and even delegating to helper AIs for specific tasks. When it spawns these helpers, each one gets a <strong>fresh context window</strong>, free from rot. The result: AI that handles 100x more information without losing accuracy.",
+    "watchHint": "",
+    "tryIt": "Try it yourself",
+    "whatYouSee": "What you'll see",
+    "exploration": "Exploration",
+    "explorationDesc": "RLM reads and structures your document",
+    "codeExecution": "Code Execution",
+    "codeExecutionDesc": "Python scripts process the content",
+    "helperAIs": "Helper AIs",
+    "helperAIsDesc": "Smaller AIs analyze each section",
+    "finalAnswer": "Final Answer",
+    "finalAnswerDesc": "Insights combined into one response"
+  },
+  "flowDiagram": {
+    "traditionalAI": "Traditional AI",
+    "rlmSolution": "RLM Solution",
+    "contextWindow": "Context Window",
+    "full": "{percent}% full",
+    "contextFilling": "Context filling...",
+    "detailsLost": "Details getting lost...",
+    "performanceDropping": "Performance dropping...",
+    "traditionalDesc": "Everything crammed into one context. Old information gets lost as new information arrives.",
+    "yourContent": "Your Content + Question",
+    "exploresWithCode": "Explores with Code",
+    "fresh": "Fresh",
+    "helperAIs": "Helper AIs (fresh context)",
+    "accurateAnswer": "Accurate Answer"
+  },
+  "exampleQuestions": {
+    "summarize": "Summarize the main points of this document",
+    "decisions": "What decisions were made in this meeting?",
+    "findings": "What are the key findings or conclusions?",
+    "actionItems": "List all action items mentioned"
+  },
+  "processor": {
+    "changeFile": "Change File",
+    "characters": "({count} characters)",
+    "askQuestion": "Ask a Question",
+    "placeholder": "What would you like to know about this document?",
+    "tryOne": "Try one of these:",
+    "analyze": "Analyze with RLM",
+    "processing": "Processing...",
+    "cancel": "Cancel",
+    "runAgain": "Run Again",
+    "step": "Step {number}",
+    "stepsCompleted": "Steps completed:",
+    "steps": "{count} step",
+    "stepsPlural": "{count} steps",
+    "rlmThinking": "RLM is thinking...",
+    "codeExecuted": "Code executed",
+    "errorTitle": "Something went wrong",
+    "maxSteps": "Max Steps:",
+    "changeLLM": "Change"
+  },
+  "phases": {
+    "exploring": {
+      "title": "Exploring Your Document",
+      "narrator": "RLM is reading through your document to understand its structure.",
+      "insight": "Unlike ChatGPT, RLM keeps your document external and examines it through code."
+    },
+    "analyzing": {
+      "title": "Breaking It Into Pieces",
+      "narrator": "RLM is writing code to split the document into manageable chunks.",
+      "insight": "This is why RLM can handle documents up to 100x longer than typical AI."
+    },
+    "synthesizing": {
+      "title": "Asking Helper AIs",
+      "narrator": "RLM is delegating analysis of each chunk to helper AIs.",
+      "insight": "This is the 'recursive' part - RLM calls other AIs for help."
+    },
+    "answering": {
+      "title": "Writing the Answer",
+      "narrator": "RLM is combining all the findings into a final response.",
+      "insight": "The answer is grounded in systematic analysis, not guessing."
+    }
+  },
+  "iterationSummary": {
+    "code": "Code",
+    "helper": "{count} helper",
+    "helpers": "{count} helpers",
+    "askedHelpers": "Asked {count} helper AI for analysis",
+    "askedHelpersPlural": "Asked {count} helper AIs for analysis",
+    "executedCode": "Executed code to process content",
+    "explored": "Explored document structure"
+  },
+  "storyView": {
+    "back": "Back",
+    "expandAll": "Expand All",
+    "collapseAll": "Collapse All",
+    "finalAnswer": "Final Answer",
+    "analysisResult": "The result of RLM's analysis",
+    "inProgress": "Analysis in progress...",
+    "seeHow": "See how RLM figured this out ({count} steps)",
+    "step": "Step {number}:",
+    "code": "Code",
+    "output": "Output",
+    "helperResponses": "Helper AI Responses ({count})",
+    "helperNumber": "Helper AI #{number}",
+    "clickExpand": "Click to expand",
+    "analyzingContent": "Analyzing content...",
+    "fullQuestion": "Full Question:",
+    "helperResponse": "Helper's Response:",
+    "rlmThinking": "RLM's Thinking:",
+    "footerSummary": "RLM processed your document in {count} thinking steps, using code to systematically analyze and synthesize information.",
+    "footerDifference": "This is what makes RLM different from traditional AI - it treats your document as external data it examines through code."
+  },
+  "storyPhases": {
+    "exploring": {
+      "title": "Exploring Your Document",
+      "description": "RLM is reading and understanding the structure of your document."
+    },
+    "analyzing": {
+      "title": "Breaking It Into Pieces",
+      "description": "RLM is dividing the document into smaller, manageable chunks."
+    },
+    "synthesizing": {
+      "title": "Connecting the Findings",
+      "description": "RLM is combining insights from different sections."
+    },
+    "answering": {
+      "title": "Writing the Final Answer",
+      "description": "RLM is composing a comprehensive response based on its analysis."
+    }
+  },
+  "storyInsights": {
+    "first": "Unlike ChatGPT, RLM can handle documents up to 100x longer because it keeps them external and accesses them through code, rather than cramming everything into memory.",
+    "subLM": "This is \"recursive\" thinking - RLM spawns helper AIs that each get a fresh context window, free from accumulated context rot. Each helper starts with a clear mind.",
+    "code": "RLM uses a REPL (like a calculator for code) to run Python and see results immediately. This lets it systematically process your document.",
+    "default": "RLM is building on its previous analysis, systematically refining its understanding."
+  },
+  "storyTitles": {
+    "gettingStarted": "Getting Started",
+    "deliveringAnswer": "Delivering the Answer",
+    "askingForHelp": "Asking for Help",
+    "writingPlan": "Writing a Plan"
+  },
+  "storyStats": {
+    "iterations": "steps",
+    "codeBlocks": "code blocks",
+    "helpers": "helpers",
+    "time": "total time",
+    "tokens": "tokens"
+  },
+  "fileUploader": {
+    "pasteContent": "Paste your content",
+    "pastePlaceholder": "Paste text, code, or any content you want to analyze...",
+    "analyzeContent": "Analyze Content",
+    "or": "or",
+    "dropHere": "Drop here",
+    "uploadDocument": "Upload Document",
+    "uploadFile": "Upload File",
+    "uploadJsonl": "Upload .jsonl",
+    "supportsDocuments": "Supports .txt, .md, and .pdf files",
+    "supportsAll": "Supports .txt, .md, .pdf, and .jsonl files",
+    "supportsJsonl": "Supports .jsonl log files",
+    "chooseFile": "Choose File",
+    "unsupportedType": "Please upload a supported file type: {types}",
+    "uploadJsonlOnly": "Please upload a .jsonl file",
+    "uploadDocumentOnly": "Please upload a .txt, .md, or .pdf file",
+    "failedRead": "Failed to read file"
+  },
+  "privacy": {
+    "title": "Privacy Protected",
+    "full": "Your files are parsed directly in your browser. No data is uploaded or stored on any server. The only external call is to the Cerebras API for RLM processing, which does not retain your data.",
+    "compact": "Files processed in-browser. Data sent only to Cerebras API for processing and not retained.",
+    "label": "Privacy:"
+  },
+  "logViewer": {
+    "back": "Back",
+    "unknownModel": "Unknown model",
+    "unknownBackend": "Unknown backend",
+    "unknownEnv": "Unknown env",
+    "hasErrors": "Has Errors",
+    "completed": "Completed",
+    "contextQuestion": "Context / Question",
+    "finalAnswer": "Final Answer",
+    "notCompleted": "Not yet completed",
+    "iterations": "Iterations",
+    "code": "Code",
+    "subLM": "Sub-LM",
+    "exec": "Exec",
+    "navigate": "Navigate",
+    "backKey": "Back"
+  },
+  "iterationTimeline": {
+    "title": "Recursive Language Model Trajectory",
+    "total": "({count} total)",
+    "scroll": "scroll",
+    "final": "FINAL",
+    "error": "ERR",
+    "code": "{count} code",
+    "sub": "{count} sub"
+  },
+  "trajectoryPanel": {
+    "conversation": "Conversation",
+    "iterationOf": "Iteration {current} of {total}",
+    "codeCount": "{count} code",
+    "answer": "Answer",
+    "systemPrompt": "System Prompt",
+    "user": "User",
+    "assistant": "Assistant",
+    "instructionsContext": "Instructions & context setup",
+    "continuationPrompt": "Continuation prompt",
+    "modelResponse": "Model Response",
+    "iteration": "Iteration {number}",
+    "chars": "{count} chars",
+    "finalAnswer": "Final Answer",
+    "taskCompleted": "Task completed successfully"
+  },
+  "executionPanel": {
+    "selectIteration": "Select an iteration to view execution details",
+    "codeSubLM": "Code & Sub-LM Calls",
+    "iteration": "Iteration {number}",
+    "codeBlock": "{count} code block",
+    "codeBlocks": "{count} code blocks",
+    "subLMCall": "{count} sub-LM call",
+    "subLMCalls": "{count} sub-LM calls",
+    "hasFinalAnswer": "Has Final Answer",
+    "codeExecution": "Code Execution",
+    "subLMCallsTab": "Sub-LM Calls ({count})",
+    "noCode": "No code was executed in this iteration",
+    "noCodeDesc": "The model didn't write any code blocks",
+    "noSubLM": "No sub-LM calls were made in this iteration",
+    "noSubLMDesc": "Sub-LM calls appear when using llm_query() in the REPL",
+    "llmQueryFrom": "llm_query() from Block #{number}",
+    "tokensIn": "{count} in",
+    "tokensOut": "{count} out",
+    "prompt": "Prompt",
+    "response": "Response"
+  },
+  "codeBlock": {
+    "codeBlock": "Code Block #{number}",
+    "error": "Error",
+    "output": "Output",
+    "python": "Python",
+    "stdout": "stdout",
+    "stderr": "stderr",
+    "variables": "Variables",
+    "subLMCalls": "Sub-LM Calls ({count})",
+    "llmQuery": "llm_query #{number}",
+    "promptTokens": "{count} prompt",
+    "completionTokens": "{count} completion",
+    "promptLabel": "Prompt:",
+    "responseLabel": "Response:"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "toggle": "Change language",
+    "en": "English",
+    "pt": "Português",
+    "es": "Español"
+  },
+  "llmModal": {
+    "title": "Select LLM Provider",
+    "description": "Running more than 10 steps requires selecting an LLM provider and entering your API key.",
+    "selectProvider": "Select Provider",
+    "apiKey": "API Key",
+    "show": "Show",
+    "hide": "Hide",
+    "privacyNotice": "Your API key is processed in-memory only and never stored on our servers. It is sent directly to the provider for this session only.",
+    "cancel": "Cancel",
+    "continue": "Continue"
+  }
+}

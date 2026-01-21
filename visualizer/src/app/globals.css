@@ -1,0 +1,286 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* Light mode - Namastex Research Labs magenta/cyan theme */
+:root {
+  --radius: 0.625rem;
+  --background: oklch(0.99 0.003 277);
+  --foreground: oklch(0.18 0.015 277);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.015 277);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.015 277);
+  --primary: oklch(0.55 0.20 320);
+  --primary-foreground: oklch(0.99 0.003 277);
+  --secondary: oklch(0.97 0.008 277);
+  --secondary-foreground: oklch(0.22 0.015 277);
+  --muted: oklch(0.97 0.006 277);
+  --muted-foreground: oklch(0.48 0.015 277);
+  --accent: oklch(0.60 0.18 200);
+  --accent-foreground: oklch(0.22 0.015 277);
+  --destructive: oklch(0.55 0.20 25);
+  --border: oklch(0.92 0.008 277);
+  --input: oklch(0.94 0.006 277);
+  --ring: oklch(0.55 0.20 320);
+  --chart-1: oklch(0.55 0.20 320);
+  --chart-2: oklch(0.60 0.18 200);
+  --chart-3: oklch(0.65 0.12 90);
+  --chart-4: oklch(0.55 0.14 280);
+  --chart-5: oklch(0.55 0.18 25);
+  --sidebar: oklch(0.99 0.003 277);
+  --sidebar-foreground: oklch(0.18 0.015 277);
+  --sidebar-primary: oklch(0.55 0.20 320);
+  --sidebar-primary-foreground: oklch(0.99 0.003 277);
+  --sidebar-accent: oklch(0.95 0.01 277);
+  --sidebar-accent-foreground: oklch(0.18 0.015 277);
+  --sidebar-border: oklch(0.92 0.008 277);
+  --sidebar-ring: oklch(0.55 0.20 320);
+}
+
+/* Dark mode - Namastex Research Labs purple-based with magenta/cyan */
+.dark {
+  --background: oklch(0.13 0.025 277);
+  --foreground: oklch(0.94 0.015 277);
+  --card: oklch(0.15 0.02 277);
+  --card-foreground: oklch(0.94 0.015 277);
+  --popover: oklch(0.15 0.02 277);
+  --popover-foreground: oklch(0.94 0.015 277);
+  --primary: oklch(0.70 0.22 320);
+  --primary-foreground: oklch(0.12 0.015 277);
+  --secondary: oklch(0.18 0.015 277);
+  --secondary-foreground: oklch(0.94 0.015 277);
+  --muted: oklch(0.18 0.01 277);
+  --muted-foreground: oklch(0.62 0.02 277);
+  --accent: oklch(0.70 0.18 200);
+  --accent-foreground: oklch(0.12 0.015 277);
+  --destructive: oklch(0.58 0.20 25);
+  --border: oklch(0.24 0.015 277);
+  --input: oklch(0.20 0.012 277);
+  --ring: oklch(0.70 0.22 320);
+  --chart-1: oklch(0.70 0.22 320);
+  --chart-2: oklch(0.70 0.18 200);
+  --chart-3: oklch(0.75 0.12 90);
+  --chart-4: oklch(0.62 0.14 280);
+  --chart-5: oklch(0.58 0.18 25);
+  --sidebar: oklch(0.14 0.02 277);
+  --sidebar-foreground: oklch(0.94 0.015 277);
+  --sidebar-primary: oklch(0.70 0.22 320);
+  --sidebar-primary-foreground: oklch(0.12 0.015 277);
+  --sidebar-accent: oklch(0.18 0.015 277);
+  --sidebar-accent-foreground: oklch(0.94 0.015 277);
+  --sidebar-border: oklch(0.24 0.015 277);
+  --sidebar-ring: oklch(0.70 0.22 320);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    font-size: 16px;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02";
+    line-height: 1.6;
+  }
+}
+
+/* Custom scrollbar - adapts to theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 5px;
+  border: 2px solid var(--muted);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Code block styling - only for actual code */
+.code-block {
+  font-family: var(--font-geist-mono), 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+/* Gradient text - adapts to theme */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid pattern background - subtle */
+.grid-pattern {
+  background-image:
+    linear-gradient(oklch(0.88 0.01 277 / 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.88 0.01 277 / 0.4) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.dark .grid-pattern {
+  background-image:
+    linear-gradient(oklch(0.22 0.01 277 / 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.22 0.01 277 / 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Terminal styling - only for code areas */
+.terminal-prompt::before {
+  content: '❯ ';
+  color: var(--primary);
+}
+
+/* Message bubble styling for trajectory */
+.message-bubble {
+  position: relative;
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+}
+
+.message-bubble-system {
+  background: oklch(0.96 0.015 277 / 0.4);
+  border-left: 3px solid oklch(0.58 0.12 277);
+}
+
+.message-bubble-user {
+  background: oklch(0.95 0.02 320 / 0.3);
+  border-left: 3px solid oklch(0.55 0.18 320);
+}
+
+.message-bubble-assistant {
+  background: oklch(0.95 0.02 200 / 0.3);
+  border-left: 3px solid oklch(0.58 0.14 200);
+}
+
+.dark .message-bubble-system {
+  background: oklch(0.18 0.015 277 / 0.25);
+  border-left: 3px solid oklch(0.58 0.12 277);
+}
+
+.dark .message-bubble-user {
+  background: oklch(0.16 0.02 320 / 0.3);
+  border-left: 3px solid oklch(0.65 0.18 320);
+}
+
+.dark .message-bubble-assistant {
+  background: oklch(0.16 0.02 200 / 0.25);
+  border-left: 3px solid oklch(0.65 0.14 200);
+}
+
+/* Prose styling for readability */
+.prose-trajectory {
+  font-size: 15px;
+  line-height: 1.75;
+  letter-spacing: -0.005em;
+}
+
+.prose-trajectory p {
+  margin-bottom: 1rem;
+}
+
+.prose-trajectory pre {
+  background: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 14px;
+  margin: 1rem 0;
+}
+
+.prose-trajectory code {
+  background: var(--muted);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.prose-trajectory pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Educational callout styles */
+.edu-callout {
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.edu-callout-insight {
+  background: oklch(0.96 0.03 85 / 0.5);
+  border: 1px solid oklch(0.88 0.05 85);
+}
+
+.dark .edu-callout-insight {
+  background: oklch(0.18 0.02 85 / 0.4);
+  border: 1px solid oklch(0.35 0.04 85);
+}

@@ -1,0 +1,67 @@
+[project]
+name = "rlm"
+authors = [
+    {name = "Alex Zhang", email = "altzhang@mit.edu"},
+]
+version = "0.1.0"
+description = "Recursive Language Models."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.75.0",
+    "cerebras-cloud-sdk>=1.0.0",
+    "google-genai>=1.56.0",
+    "openai>=2.14.0",
+    "portkey-ai>=2.1.0",
+    "pytest>=9.0.2",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+modal = ["modal>=0.73.0", "dill>=0.3.7"]
+prime = ["prime-sandboxes>=0.2.0", "dill>=0.3.7"]
+server = ["fastapi>=0.115.0", "uvicorn>=0.34.0", "python-multipart>=0.0.20", "marker-pdf>=1.0.0"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["rlm", "rlm.*", "server", "server.*"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "ruff>=0.14.10",
+    "ty>=0.0.7",
+]
+test = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+    "pytest-cov>=6.0.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
