@@ -161,14 +161,10 @@ def get_api_keys(provider: dict) -> dict[str, str]:
         console.print("[dim]No API keys required for this provider.[/dim]")
         return env_values
 
-    console.print("[bold]Enter your credentials:[/bold]")
-    console.print("[dim]Values will be hidden for sensitive fields[/dim]\n")
+    console.print("[bold]Enter your credentials:[/bold]\n")
 
     for var in provider["env_vars"]:
-        if var["secret"]:
-            value = Prompt.ask(var["description"], password=True)
-        else:
-            value = Prompt.ask(var["description"])
+        value = Prompt.ask(var["description"])
 
         if value:
             env_values[var["name"]] = value
