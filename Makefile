@@ -25,15 +25,14 @@ check-deps:
 	@echo "All dependencies found."
 
 install: check-deps
-	@echo "Installing backend dependencies..."
-	uv pip install -e ".[server]"
-	@echo "Installing frontend dependencies..."
+	@echo "Installing dependencies..."
+	uv sync --extra server
+	@echo "Installing frontend..."
 	cd visualizer && pnpm install
 	@echo "Installation complete!"
 
 install-dev: check-deps
-	uv sync --group dev --group test
-	uv pip install -e ".[server]"
+	uv sync --group dev --group test --extra server
 	cd visualizer && pnpm install
 
 start-backend:
