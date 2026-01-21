@@ -9,11 +9,11 @@
     "paperTitle": "Recursive Language Models (RLMs)"
   },
   "dashboard": {
-    "problemTitle": "El Problema: Deterioro de Contexto",
+    "problemTitle": "El Problema: Context Rot",
     "problemText1": "Toda IA tiene una \"ventana de contexto\" - una cantidad fija de información que puede mantener en mente a la vez. Cuando esa ventana se llena - por un documento largo, una pregunta compleja, o simplemente una conversación de ida y vuelta - algo se rompe.",
-    "problemText2": "Los investigadores llaman a esto <strong>deterioro de contexto</strong>: cuanta más información la IA intenta manejar, peor funciona. Los detalles anteriores se pierden. Las respuestas se vuelven menos precisas. Los estudios muestran que incluso los modelos más avanzados pasan de casi perfectos a tener dificultades cuando su ventana de contexto se llena.",
-    "solutionTitle": "La Solución: Modelos de Lenguaje Recursivos",
-    "solutionText1": "Investigadores del MIT desarrollaron un nuevo enfoque llamado <strong>RLM</strong> - abreviación de <strong>Modelos de Lenguaje Recursivos</strong>. En lugar de amontonar todo en la ventana de contexto, RLM mantiene la información <em>externamente</em>, como notas en un escritorio en lugar de pensamientos amontonados en tu cabeza.",
+    "problemText2": "Los investigadores llaman a esto <strong>context rot</strong>: cuanta más información la IA intenta manejar, peor funciona. Los detalles anteriores se pierden. Las respuestas se vuelven menos precisas. Los estudios muestran que incluso los modelos más avanzados pasan de casi perfectos a tener dificultades cuando su ventana de contexto se llena.",
+    "solutionTitle": "La Solución: Recursive Language Models",
+    "solutionText1": "Investigadores del MIT desarrollaron un nuevo enfoque llamado <strong>RLM</strong> - abreviación de <strong>Recursive Language Models</strong>. En lugar de amontonar todo en la ventana de contexto, RLM mantiene la información <em>externamente</em>, como notas en un escritorio en lugar de pensamientos amontonados en tu cabeza.",
     "solutionText2": "RLM explora contenido programáticamente - leyendo lo que necesita, rastreando hallazgos en código, e incluso delegando a IAs auxiliares para tareas específicas. Cuando crea estos auxiliares, cada uno recibe una <strong>ventana de contexto limpia</strong>, libre de deterioro. El resultado: IA que maneja 100x más información sin perder precisión.",
     "watchHint": "",
     "tryIt": "Pruébalo tú mismo",
@@ -199,7 +199,7 @@
     "backKey": "Volver"
   },
   "iterationTimeline": {
-    "title": "Trayectoria del Modelo de Lenguaje Recursivo",
+    "title": "Trayectoria del Recursive Language Model",
     "total": "({count} total)",
     "scroll": "desplazar",
     "final": "FINAL",

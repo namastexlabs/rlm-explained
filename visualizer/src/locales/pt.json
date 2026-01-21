@@ -9,11 +9,11 @@
     "paperTitle": "Recursive Language Models (RLMs)"
   },
   "dashboard": {
-    "problemTitle": "O Problema: Deterioração de Contexto",
+    "problemTitle": "O Problema: Context Rot",
     "problemText1": "Toda IA tem uma \"janela de contexto\" - uma quantidade fixa de informação que ela consegue manter em mente de uma vez. Conforme essa janela se enche - com um documento longo, uma pergunta complexa, ou simplesmente uma conversa de vai-e-vem - algo se quebra.",
-    "problemText2": "Pesquisadores chamam isso de <strong>deterioração de contexto</strong>: quanto mais informação a IA tenta processar, pior ela performa. Detalhes anteriores se perdem. Respostas ficam menos precisas. Estudos mostram que até os modelos mais avançados caem de quase perfeitos para com dificuldades conforme sua janela de contexto se enche.",
-    "solutionTitle": "A Solução: Modelos de Linguagem Recursivos",
-    "solutionText1": "Pesquisadores do MIT desenvolveram uma nova abordagem chamada <strong>RLM</strong> - abreviação de <strong>Modelos de Linguagem Recursivos</strong>. Em vez de amontoar tudo na janela de contexto, o RLM mantém informações <em>externamente</em>, como anotações em uma mesa em vez de pensamentos amontoados na sua cabeça.",
+    "problemText2": "Pesquisadores chamam isso de <strong>context rot</strong>: quanto mais informação a IA tenta processar, pior ela performa. Detalhes anteriores se perdem. Respostas ficam menos precisas. Estudos mostram que até os modelos mais avançados caem de quase perfeitos para com dificuldades conforme sua janela de contexto se enche.",
+    "solutionTitle": "A Solução: Recursive Language Models",
+    "solutionText1": "Pesquisadores do MIT desenvolveram uma nova abordagem chamada <strong>RLM</strong> - abreviação de <strong>Recursive Language Models</strong>. Em vez de amontoar tudo na janela de contexto, o RLM mantém informações <em>externamente</em>, como anotações em uma mesa em vez de pensamentos amontoados na sua cabeça.",
     "solutionText2": "O RLM explora conteúdo programaticamente - lendo o que precisa, rastreando descobertas em código, e até delegando para IAs auxiliares para tarefas específicas. Quando ele cria esses auxiliares, cada um recebe uma <strong>janela de contexto limpa</strong>, livre de deterioração. O resultado: IA que processa 100x mais informação sem perder precisão.",
     "watchHint": "",
     "tryIt": "Experimente você mesmo",
@@ -199,7 +199,7 @@
     "backKey": "Voltar"
   },
   "iterationTimeline": {
-    "title": "Trajetória do Modelo de Linguagem Recursivo",
+    "title": "Trajetória do Recursive Language Model",
     "total": "({count} total)",
     "scroll": "rolar",
     "final": "FINAL",
