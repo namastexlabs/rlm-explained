@@ -52,7 +52,7 @@ start-backend:
 	uv run python server/main.py
 
 start-frontend:
-	cd visualizer && pnpm dev
+	cd visualizer && pnpm start
 
 start:
 	@echo "Starting RLM servers..."
@@ -60,7 +60,7 @@ start:
 	@echo "Frontend: http://localhost:3000"
 	@trap 'kill 0' EXIT; \
 	uv run python server/main.py & \
-	cd visualizer && pnpm dev
+	cd visualizer && pnpm start
 
 lint: install-dev
 	uv run ruff check .
