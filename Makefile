@@ -38,6 +38,8 @@ install: check-deps
 	@echo "Building frontend..."
 	cd visualizer && pnpm build
 	@echo "Installation complete!"
+	@echo ""
+	@uv run python scripts/setup.py
 
 setup: check-deps
 	@uv run python scripts/setup.py
