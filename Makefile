@@ -42,7 +42,7 @@ install: check-deps
 	@uv run python scripts/setup.py
 
 setup: check-deps
-	@uv run python scripts/setup.py
+	@uv run python scripts/setup.py --force
 
 install-dev: check-deps
 	uv sync --group dev --group test --extra server
