@@ -18,8 +18,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RLM Visualizer",
-  description: "Visualize and debug Recursive Language Model execution traces",
+  title: "RLM Explained - Namastex Labs",
+  description: "Interactive visualizer for Recursive Language Models (RLM). See how AI solves context rot by processing documents through code execution and helper AIs.",
+  keywords: ["RLM", "Recursive Language Models", "AI visualization", "context rot", "MIT", "Namastex Labs"],
+  authors: [{ name: "Namastex Labs" }],
+  openGraph: {
+    title: "RLM Explained - Namastex Labs",
+    description: "Interactive visualizer for Recursive Language Models. See how AI solves context rot.",
+    type: "website",
+    locale: "en_US",
+    siteName: "RLM Explained",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RLM Explained - Namastex Labs",
+    description: "Interactive visualizer for Recursive Language Models. See how AI solves context rot.",
+  },
 };
 
 export default function RootLayout({
