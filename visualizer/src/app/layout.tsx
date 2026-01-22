@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LocaleProvider } from "@/lib/i18n";
+import { BugReportButton } from "@/components/BugReportButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
           <LocaleProvider>
             <TooltipProvider>
               {children}
+              <BugReportButton />
             </TooltipProvider>
           </LocaleProvider>
         </ThemeProvider>

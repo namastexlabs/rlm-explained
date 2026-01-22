@@ -281,5 +281,8 @@
     "privacyNotice": "Your API key is processed in-memory only and never stored on our servers. It is sent directly to the provider for this session only.",
     "cancel": "Cancel",
     "continue": "Continue"
+  },
+  "bugReport": {
+    "tooltip": "Report a bug"
   }
 }

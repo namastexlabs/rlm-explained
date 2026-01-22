@@ -281,5 +281,8 @@
     "privacyNotice": "Tu clave de API se procesa solo en memoria y nunca se almacena en nuestros servidores. Se envía directamente al proveedor solo para esta sesión.",
     "cancel": "Cancelar",
     "continue": "Continuar"
+  },
+  "bugReport": {
+    "tooltip": "Reportar un error"
   }
 }
